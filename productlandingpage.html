@@ -2,8 +2,12 @@
 <html>
   <style>
     html {
-      background: linear-gradient(55deg, white, #e0e0e0);
-      font-family: Verdana, Geneva, Tahoma, sans-serif
+      background: linear-gradient(130deg, white, #e0e0e0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .intro {
+      margin-top: 50px;
     }
 
     #header-img {
@@ -15,6 +19,10 @@
       float: right;
     }
 
+    header {
+      margin: 10px;
+    }
+
     .nav-link {
       padding: 25px;
       font-size: 1.2em;
@@ -22,19 +30,17 @@
 
     a {
       text-decoration: none;
-      background-color: none;
       color: black;
     }
 
     .subscription {
       text-align: center;
-      align-items: center;
-      justify-content: center;
     }
 
     #input-field {
       height: 20px;
       width: 25%;
+      margin-top: 20px;
       padding: 10px;
       font-size: 15px;
       border: 1px solid #c6c6c6;
@@ -42,12 +48,41 @@
     }
 
     #submit {
-      margin: 5px;
+      margin: 10px;
       height: 30px;
       width: 10%;
       background-color: orange;
       border: 1px solid darkorange;
       color: darkslategray;
+    }
+
+    #videos {
+      margin-top: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .container > div {
+      background-color: aliceblue;
+      width: 30%;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+      border: 1px solid;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
   <head>
@@ -63,15 +98,42 @@
 
   <body>
     <div class="subscription">
-      <h2>E-mail us to more information</h2>
+      <h2 class="intro">E-mail us to more information</h2>
       <form id="form" action="">
         <input id="input-field" type="email" name="email" id="email" placeholder="Enter your email address"><br>
         <button type="button" id="submit">SUBMIT</button>
       </form>
     </div>
 
-    <div>
+    <div class="subscription">
         <iframe id="videos" width="560" height="315" src="https://www.youtube.com/embed/Dt-x5OUS-sY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </iframe>
+    </div>
+
+    <div id="exchanges" class="subscription">
+      <h2 class="intro">Get acquainted to some of our trips:</h2>
+      <div class="container">
+        <div>
+          <h3>COUNTRY 1</h3>
+          <p>Lorem ipsum.
+            Lorem ipsum dolor.
+          </p>
+          <button>VIEW MORE</button>
+        </div>
+        <div>
+          <h3>COUNTRY 2</h3>
+          <p>Lorem ipsum.
+            Lorem ipsum dolor.
+          </p>
+          <button>VIEW MORE</button>
+        </div>
+        <div>
+          <h3>COUNTRY 3</h3>
+          <p>Lorem ipsum.
+            Lorem ipsum dolor.
+          </p>
+          <button>VIEW MORE</button>
+        </div>      
+      </div>
     </div>
   </body>
 </html>
