@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <style>
+    html {
+      background: linear-gradient(55deg, white, #e0e0e0);
+      font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+
     #header-img {
       width: 10%;
     }
@@ -11,21 +16,62 @@
     }
 
     .nav-link {
+      padding: 25px;
+      font-size: 1.2em;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: none;
+      color: black;
+    }
+
+    .subscription {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #input-field {
+      height: 20px;
+      width: 25%;
       padding: 10px;
+      font-size: 15px;
+      border: 1px solid #c6c6c6;
+      border-radius: 2px;
+    }
+
+    #submit {
+      margin: 5px;
+      height: 30px;
+      width: 10%;
+      background-color: orange;
+      border: 1px solid darkorange;
+      color: darkslategray;
     }
   </style>
   <head>
     <header id="header">
       <img id="header-img" src="https://thumbs.dreamstime.com/b/camera-logo-25378801.jpg" alt="A globe with the company's arrows around it">
       <nav id="nav-bar">
-        <p class="nav-link">Exchanges</p>
-        <p class="nav-link">About</p>
-        <p class="nav-link">Contact</p>
+        <p class="nav-link"><a href="#exchanges">Exchanges</a></p>
+        <p class="nav-link"><a href="#about">About</a></p>
+        <p class="nav-link"><a href="#contact">Contact</a></p>
       </nav>
     </header>
   </head>
 
   <body>
-    
+    <div class="subscription">
+      <h2>E-mail us to more information</h2>
+      <form id="form" action="">
+        <input id="input-field" type="email" name="email" id="email" placeholder="Enter your email address"><br>
+        <button type="button" id="submit">SUBMIT</button>
+      </form>
+    </div>
+
+    <div>
+        <iframe id="videos" width="560" height="315" src="https://www.youtube.com/embed/Dt-x5OUS-sY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </iframe>
+    </div>
   </body>
 </html>
